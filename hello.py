@@ -110,6 +110,7 @@ YuChen().test_datetime();
 #YuChen().test_tup()
 #YuChen().test_list();
 #YuChen().test_for2();
+#YuChen().test_for2();
 '''YuChen().test_for()
 YuChen().test_list();
 A=YuChen();

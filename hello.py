@@ -100,23 +100,43 @@ class YuChen:
 
     #匿名函数
     # 可写函数说明
-    sum = lambda arg1, arg2: arg1 + arg2;
+    sum = lambda arg1, arg2: arg1 + arg2; #arg1, arg2是入参。冒号后面是表达式
     # 调用sum函数
     print("相加后的值为 : ", sum(10, 20));
     print("相加后的值为 : ", sum(20, 20));
 
-YuChen().test_datetime();
+    def File(self):
+        #input函数
+        str = input("请输入：");
+        print("你输入的数字是：",str);
+
+    def Open(self):
+        #open函数
+        do = open("foo.txt","r+");
+        print("文件名是：",do.name);
+        print("文件是否关闭：", do.close());
+        print("访问模式：", do.mode);
+
+        #close函数
+        do.close();
+        print("文件是否关闭：", do.close());
+
+        #write函数
+        do = open("foo.txt", "r+")
+        do.write("ssssssss");
+        #read函数
+        str = do.read();
+        print("读取的内容是：",str);
+
+
+YuChen().Open();
+#YuChen().test_datetime();
 #YuChen().test_dict();
 #YuChen().test_tup()
 #YuChen().test_list();
-#YuChen().test_for2();
 #YuChen().test_for2();
 '''YuChen().test_for()
 YuChen().test_list();
 A=YuChen();
 A.test_list();
-测试但是大家都把时间可是大家思考的
-7777
-8888
-9999
 '''

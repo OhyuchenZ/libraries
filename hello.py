@@ -112,7 +112,9 @@ class YuChen:
 
     def Open(self):
         #open函数
-        do = open("foo.txt","r+");
+
+        import os;
+        do = open("fee.txt","r+");
         print("文件名是：",do.name);
         print("文件是否关闭：", do.close());
         print("访问模式：", do.mode);
@@ -124,9 +126,25 @@ class YuChen:
         #write函数
         do = open("foo.txt", "r+")
         do.write("ssssssss");
+
         #read函数
         str = do.read();
         print("读取的内容是：",str);
+
+        #tell函数
+        str1 = do.tell();
+        print("当前文件位置：",str1);
+
+        #rename()方法
+        do.close();
+        os.rename("fee.txt","foo.txt")#重命名foo.txt到fee.txt
+
+        #mkdir()方法:创建目录
+        #chdir()方法:修改目录
+        #rmdir()方法:删除目录
+
+
+
 
 
 YuChen().Open();

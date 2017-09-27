@@ -43,15 +43,27 @@ class Test:
         思路2：
         使用列表
         '''
-        lirunqujian = [0,10,20,40,60,100];
-        chunlirun = [0,1,0.75,1,0.6,0.4];
-        lilv = [0,0.1,0.075,0.05,0.03,0.01];
+        lirunqujian = [100,60,40,20,10,0];
+        chunlirun = [0.4,0.6,1,0.75,1,0];
+        lilv = [0.01,0.01,0.03,0.05,0.075,0.1];
         jiangjin = 0;
         lirun = int(input("输入当月利润(万元)："));
         for aa in range(0,6):
-            if(lirun<lirunqujian[aa]):
-                jiangjin = chunlirun[aa] + lilv[aa]*lirun;
+            if(lirun>=lirunqujian[aa]):
+                jiangjin += lilv[aa]*(lirun-lirunqujian[aa]);
+                lirun = lirunqujian[aa];
         print("奖金总数:",jiangjin)
+
+    def demo03(self):
+        '''
+        一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
+        '''
+        for x in range(0,100):
+            n*n = x + 100
+            m*m = x + 269
+            if((m+n)*(m-n)==168):
+                break;
+
 
 
 
@@ -59,4 +71,4 @@ class Test:
 
 
 #Test().demo01();
-Test().demo02();
+Test().demo03();

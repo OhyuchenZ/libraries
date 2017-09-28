@@ -58,11 +58,28 @@ class Test:
         '''
         一个整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少？
         '''
-        for x in range(0,100):
-            n*n = x + 100
-            m*m = x + 269
-            if((m+n)*(m-n)==168):
+
+
+    def demo04(self):
+        '''
+        输入某年某月某日，判断这一天是这一年的第几天？
+        :return:
+        '''
+        year = int(input("年份："));
+        month = int(input("月份："));
+        day = int(input("日："));
+        days = 0;
+
+        months = [0,31,28,31,30,31,30,31,31,30,31,30,31];
+        for aa in range(1, 13):
+            if (month > aa):
+                days += months[aa];
+            else:
+                if (year % 4 == 0 and days >= 59):
+                    days += 1;
+                days += day;
                 break;
+        print("该日期是今年弟",days,"天");
 
 
 
@@ -71,4 +88,4 @@ class Test:
 
 
 #Test().demo01();
-Test().demo03();
+Test().demo04();

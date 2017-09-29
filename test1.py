@@ -82,10 +82,27 @@ class Test:
         print("该日期是今年弟",days,"天");
 
 
+    def demo05(self):
+        '''
+        输入三个整数x,y,z，请把这三个数由小到大输出。
+        :return:
+        '''
+        list  = [0,0,0];
+        for aa in range (0,3):
+            list[aa] = int(input("输入一个整数："));
+        list.sort();
+        print(list);
 
-
-
-
+    def demo06(n):
+        '''
+        斐波那契数列-----输出整个数列
+        :return:
+        '''
+        list = [0,1];
+        for aa in range (1,n):
+            bb = list[n-1] + list[n-2];
+            list.append(bb);
+        return list;
 
 #Test().demo01();
-Test().demo04();
+Test().demo06(int(input("请输入：")));

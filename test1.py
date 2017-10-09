@@ -104,5 +104,37 @@ class Test:
             list.append(bb);
         return list;
 
+    def demo07(self):
+        '''
+        将一个列表的数据复制到另一个列表中。
+        copy方法
+        '''
+        a = [1,2,3];
+        b = a.copy();
+        print(b);
+
+    def demo08(self):
+        '''
+        输出 9*9 乘法口诀表
+        end用法
+        :return:
+        '''
+        for aa in range (1,10):
+            print()
+            for bb in range(1,aa+1):
+                print(bb,"*",aa,"=",aa*bb,end='  |  ');
+
+    def demo09(self):
+        '''
+        暂停一秒输出。
+        比如倒计时
+        使用Sleep休眠函数
+        '''
+        import time
+        for aa in range (1,11):
+            print("倒计时：",11-aa);
+            time.sleep(1)
+
 #Test().demo01();
-Test().demo06(int(input("请输入：")));
+#Test().demo06(int(input("请输入：")));
+Test().demo09()

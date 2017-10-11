@@ -135,6 +135,21 @@ class Test:
             print("倒计时：",11-aa);
             time.sleep(1)
 
+    def demo11(self,month):
+        '''
+        古典问题：有一对兔子，从出生后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子，假如兔子都不死，问每个月的兔子总数为多少？
+        :return:self在定义时需要定义，但是在调用时会自动传入。
+
+        使用递归算法思路
+        兔子总数规律为：1、1、2、3、5、8、13……（前两个月相加就是下一个月）
+        '''
+        #month = int(input("输入月份："));
+        if month<3:
+            return 1;
+        else:
+            num = self.demo11(month-1)+self.demo11(month-2)
+            return num
+print("兔子数：",Test().demo11(int(input("输入月份："))))
 #Test().demo01();
 #Test().demo06(int(input("请输入：")));
-Test().demo09()
+#Test().demo11(int(input("输入月份：")));
